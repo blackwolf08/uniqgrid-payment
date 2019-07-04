@@ -17,7 +17,7 @@ app.set('view engine', 'ejs');
 app.use(express.json());
 app.use('/static', express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
-  res.redirect('/views/payment-view');
+  res.redirect('/views/login');
 });
 
 app.use('/api', apiRoute);

@@ -36,7 +36,7 @@
         <img class="logo" src="/static/images/logo.svg" alt="" />
       </div>
       <div class="logout">
-        <p>Logout</p>
+        <p style="cursor: pointer" onclick="logout()">Logout</p>
       </div>
     </nav>
     <div class="sidebar">
@@ -51,7 +51,7 @@
     <div class="view">
       <div class="top">
         <div class="view-top-left">
-          <h1 class="device-name">NodeX-0001</h1>
+          <h1 id="device_name" class="device-name"></h1>
           <div class="device-active"></div>
           <br />
           <h2>Account Balance : ₹ 1234.89</h2>
@@ -71,6 +71,9 @@
       </div>
     </div>
     <script>
+      let device_name = localStorage.getItem('device_name');
+      const h1 = document.getElementById('device_name');
+      h1.innerHTML = device_name;
       let mymap = L.map('mapid').setView([28.41461, 77.04343], 16);
       let marker = L.marker([28.41461, 77.04343]).addTo(mymap);
       L.tileLayer(
@@ -111,6 +114,16 @@
           ]
         },
         options: {
+          responsive: true,
+          title: {
+            display: true,
+            text: 'Tooltip Position: ' + 'average'
+          },
+          tooltips: {
+            position: 'average',
+            mode: 'index',
+            intersect: false
+          },
           scales: {
             yAxes: [
               {
@@ -122,6 +135,9 @@
           }
         }
       });
+      function logout() {
+        window.location.href = '/views/login';
+      }
     </script>
   </body>
 </html>

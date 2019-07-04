@@ -13,7 +13,7 @@
         <img class="logo" src="/static/images/logo.svg" alt="" />
       </div>
       <div class="logout">
-        <p>Logout</p>
+        <p style="cursor: pointer" onclick="logout()">Logout</p>
       </div>
     </div>
     <div class="sidebar">
@@ -77,5 +77,10 @@
         </div>
       </div>
     </div>
+    <script>
+      function logout() {
+        window.location.href = '/views/login';
+      }
+    </script>
   </body>
 </html>
