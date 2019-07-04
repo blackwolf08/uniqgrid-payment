@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Uniqgrid | Login</title>
+  </head>
+  <body>
+    <div class="root">
+      <div class="container">
+        <nav>
+          <img class="auth-logo" src="/static/images/logo.svg" alt="" />
+        </nav>
+        <div class="form-container">
+          <form action="/api/auth" method="POST">
+            Device Serial : <input type="text" />
+            <br />
+            Registered Phone : <input type="number" />
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

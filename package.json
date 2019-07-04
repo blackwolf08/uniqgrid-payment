@@ -1,0 +1,19 @@
+{
+  "name": "uniqgrid_payment",
+  "version": "1.0.0",
+  "description": "Payment Gateway for uniqgrid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sunny Dhama",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.0.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.0",
+    "razorpay": "^2.0.4"
+  }
+}
