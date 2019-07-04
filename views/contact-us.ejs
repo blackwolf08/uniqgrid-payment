@@ -8,14 +8,14 @@
     <link rel="stylesheet" type="text/css" href="/static/css/index.css" />
   </head>
   <body>
-    <nav>
+    <div class="nav">
       <div class="logo-div">
         <img class="logo" src="/static/images/logo.svg" alt="" />
       </div>
       <div class="logout">
         <p>Logout</p>
       </div>
-    </nav>
+    </div>
     <div class="sidebar">
       <div class="menu">
         <a href="/views/payment-view" class="sidebar-button">Payment</a>
@@ -25,6 +25,57 @@
         <a href="/views/contact-us" class="sidebar-button">Contact Us</a>
       </div>
     </div>
-    <div class="view"></div>
+    <div class="view">
+      <div class="contact-us-container">
+        <div class="form">
+          <h2>Contact Us</h2>
+          <form action="#">
+            <span>Subject : </span>
+            <select name="" id="subject">
+              <option selected value="">Customer Service</option>
+              <option value="">Feedback</option>
+              <option value="">Call us</option>
+            </select>
+            <br />
+            <span>Email : </span>
+            <input
+              type="email"
+              placeholder="youremail@host.com"
+              name=""
+              id="email"
+            />
+            <br />
+            <span>Attachment : </span>
+            <input type="file" name="" id="file" />
+            <br />
+            <span>Message : </span>
+            <textarea
+              name=""
+              placeholder="Any additional info?"
+              id="message"
+              cols="30"
+              rows="10"
+            ></textarea>
+            <br />
+            <input type="submit" class="contact-send" value="Send" />
+          </form>
+        </div>
+        <div class="address-div">
+          <p>
+            <img class="marker" src="/static/images/marker.png" />Uniqgrid
+            Private Limited
+          </p>
+          <p>19B, Spaze i-Tech Park,</p>
+          <p>Sector 49, Sohna Road</p>
+          <p>Gurugram, Haryana - 122 018</p>
+          <p>India</p>
+          <br />
+          <br />
+          <p>
+            <img class="phone" src="/static/images/phone.svg" />+91-124-123456
+          </p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
